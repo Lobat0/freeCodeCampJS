@@ -92,8 +92,11 @@ function buyWeapon() {
     if (gold >= 30){
         gold -= 30;
         currentWeapon ++;
+        let newWeapon = weapons [currentWeapon].name;
         goldText.innerText = gold;
-        text.innerText = "You now have a new weapon."
+        text.innerText = "You now have a " + newWeapon + ".";
+        inventory.push(newWeapon);
+        text.innerText += " In your inventory you have: " + inventory;
     }
 }
 
